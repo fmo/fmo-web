@@ -22,7 +22,7 @@ func main() {
 		UseCache:      false,
 	}
 
-	render.NewTemplates(&app)
+	render.NewRenderer(&app)
 
 	repo := handlers.NewRepo(&app)
 	handlers.NewHandlers(repo)

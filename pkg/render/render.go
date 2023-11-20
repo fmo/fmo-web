@@ -14,11 +14,11 @@ var functions = template.FuncMap{}
 
 var app *config.AppConfig
 
-func NewTemplates(a *config.AppConfig) {
+func NewRenderer(a *config.AppConfig) {
 	app = a
 }
 
-func RenderTempalte(w http.ResponseWriter, tmpl string) {
+func Render(w http.ResponseWriter, tmpl string) {
 	var tc map[string]*template.Template
 
 	if app.UseCache {
